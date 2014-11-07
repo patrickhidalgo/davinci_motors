@@ -1,0 +1,26 @@
+<%= form_for(@car) do |form| %>
+<div class="field">
+  <%= form.label :make %>
+  <br>
+  <%= form.text_field :make %>
+</div>
+<div class="field">
+  <%= form.label :model %>
+  <br>
+  <%= form.text_field :model %>
+</div>
+<div class="field">
+  <%= form.label :year %>
+  <br>
+  <%= form.number_field :year %>
+</div>
+<div class="field">
+  <%= form.label :price %>
+  <br>
+  <%= form.number_field :price %>
+</div>
+
+<div class="actions">
+  <%= form.submit @car.new_record? ? 'Create Car' :'Pimp my ride' %>
+</div>
+<% end %>

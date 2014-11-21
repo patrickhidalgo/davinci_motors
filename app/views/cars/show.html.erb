@@ -15,7 +15,7 @@
 
 <p>
   <strong>Price:</strong>
-  <%= @car.price %>
+  <%= number_to_currency(@car.price, precision: 0) %>
 </p>
 
 <%= link_to 'Edit', edit_car_path(@car) %> |

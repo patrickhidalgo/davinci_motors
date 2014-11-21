@@ -27,12 +27,12 @@ feature 'Editing Cars' do
       expect(page).to_not have_content('1967')
       expect(page).to_not have_content('Ford')
       expect(page).to_not have_content('Mustang')
-      expect(page).to_not have_content('2300')
+      expect(page).to_not have_content('$2,300')
 
       expect(page).to have_content('1987')
       expect(page).to have_content('Toyota')
       expect(page).to have_content('Camary')
-      expect(page).to have_content('4500')
+      expect(page).to have_content('$4,500')
 
     end
 

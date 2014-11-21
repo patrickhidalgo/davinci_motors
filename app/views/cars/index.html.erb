@@ -1,5 +1,6 @@
 <h1>Welcome to DaVinci Motors!</h1>
 
+<%= will_paginate @cars  %>
 <table>
   <thead>
   <tr>
@@ -17,7 +18,7 @@
       <td><%= car.make %></td>
       <td><%= car.model %></td>
       <td><%= car.year %></td>
-      <td><%= car.price %></td>
+      <td><%= number_to_currency(car.price, precision: 0) %></td>
       <td><%= link_to 'Show', car %></td>
       <td><%= link_to 'Edit', edit_car_path(car) %></td>
       <td><%= link_to 'Destroy', car, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -25,7 +26,7 @@
   <% end %>
   </tbody>
 </table>
-
+<%= will_paginate @cars  %>
 <br>
 
 

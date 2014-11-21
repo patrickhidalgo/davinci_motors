@@ -1,14 +1,20 @@
 source 'https://rubygems.org'
+gem 'bcrypt'
 gem 'rspec-rails'
 gem 'guard-bundler'
 gem 'guard-rspec'
 gem 'factory_girl_rails'
+gem 'will_paginate'
+
 group :test, :darwin, :development do
   gem 'ruby_gntp'
+  gem 'faker'
 end
 
 group :test do
   gem 'capybara'
+  gem 'launchy'
+  gem 'shoulda-matchers'
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
